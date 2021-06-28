@@ -27,21 +27,31 @@
 
 <body>
 
-    <!-- Links (sit on top) -->
+    <!-- Navbar -->
     <div class="w3-top">
-        <div class="w3-row w3-padding w3-black">
-            <div class="w3-col s3">
-                <a href="#" class="w3-button w3-block w3-black">HOME</a>
+        <div class="w3-bar w3-black w3-card">
+        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>        
+        <a href="#contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTS</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
+            <div class="w3-dropdown-content w3-bar-block w3-card-4">            
+            <a href="#privacy_policy" id="privacy_policy_button" class="w3-bar-item w3-button">PRIVACY POLICY</a>
+            <a href="#terms_of_service" id="terms_of_service_button" class="w3-bar-item w3-button">TERMS OF SERVICE</a>
             </div>
-            <div class="w3-col s3">
-                <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
-            </div>
-            <div class="w3-col s3">
-                <a href="#contacts" class="w3-button w3-block w3-black">CONTACTS</a>
-            </div>
-        </div>
+        </div>        
     </div>
-
+    </div>
+    
+    <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">             
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>  
+        <a href="#contacts" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
+        <a href="#privacy_policy" id="privacy_policy_button_navDemo" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
+        <a href="#terms_of_service" id="terms_of_service_button_navDemo" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TERMS OF SERVICE</a>      
+    </div>
+    
     <!-- Header with image -->
     <header class="bgimg w3-display-container w3-grayscale-min" id="home">
     </header>
@@ -80,21 +90,31 @@
     </footer>
 
     <script>
-        // Tabbed Menu
-        function openMenu(evt, menuName) {
-            var i, x, tablinks;
-            x = document.getElementsByClassName("menu");
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function myFunction() {
+            var x = document.getElementById("navDemo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
             }
-            tablinks = document.getElementsByClassName("tablink");
-            for (i = 0; i < x.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
-            }
-            document.getElementById(menuName).style.display = "block";
-            evt.currentTarget.firstElementChild.className += " w3-dark-grey";
-        }
-        document.getElementById("myLink").click();
+        }       
+        // document.getElementById("myLink").click();
+    </script>
+ 
+    <script type="text/javascript">
+        document.getElementById("privacy_policy_button").onclick = function () {
+            location.href = "privacy_policy.html";
+        };
+        document.getElementById("privacy_policy_button_navDemo").onclick = function () {
+            location.href = "privacy_policy.html";
+        };
+        document.getElementById("terms_of_service_button").onclick = function () {
+            location.href = "terms_of_service.html";
+        };
+        document.getElementById("terms_of_service_button_navDemo").onclick = function () {
+            location.href = "terms_of_service.html";
+        };       
     </script>
 
 </body>

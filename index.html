@@ -12,14 +12,14 @@
         height: 100%;
         font-family: "Inconsolata", sans-serif;
     }
-    
+
     .bgimg {
         background-position: center;
         background-size: cover;
         background-image: url("./assets/dictionaries.jpg");
         min-height: 75%;
     }
-    
+
     .menu {
         display: none;
     }
@@ -30,28 +30,34 @@
     <!-- Navbar -->
     <div class="w3-top">
         <div class="w3-bar w3-black w3-card">
-        <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-        <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>        
-        <a href="#contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTS</a>
-        <div class="w3-dropdown-hover w3-hide-small">
-            <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-            <div class="w3-dropdown-content w3-bar-block w3-card-4">            
-            <a href="#privacy_policy" id="privacy_policy_button" class="w3-bar-item w3-button">PRIVACY POLICY</a>
-            <a href="#terms_of_service" id="terms_of_service_button" class="w3-bar-item w3-button">TERMS OF SERVICE</a>
+            <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+                href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i
+                    class="fa fa-bars"></i></a>
+            <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+            <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
+            <a href="#contacts" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACTS</a>
+            <div class="w3-dropdown-hover w3-hide-small">
+                <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+                <div class="w3-dropdown-content w3-bar-block w3-card-4">
+                    <a href="#privacy_policy" id="privacy_policy_button" class="w3-bar-item w3-button">PRIVACY
+                        POLICY</a>
+                    <a href="#terms_of_service" id="terms_of_service_button" class="w3-bar-item w3-button">TERMS OF
+                        SERVICE</a>
+                </div>
             </div>
-        </div>        
+        </div>
     </div>
-    </div>
-    
+
     <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">             
-        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>  
+    <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+        <a href="#about" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ABOUT</a>
         <a href="#contacts" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACTS</a>
-        <a href="#privacy_policy" id="privacy_policy_button_navDemo" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PRIVACY POLICY</a>
-        <a href="#terms_of_service" id="terms_of_service_button_navDemo" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TERMS OF SERVICE</a>      
+        <a href="#privacy_policy" id="privacy_policy_button_navDemo" class="w3-bar-item w3-button w3-padding-large"
+            onclick="myFunction()">PRIVACY POLICY</a>
+        <a href="#terms_of_service" id="terms_of_service_button_navDemo" class="w3-bar-item w3-button w3-padding-large"
+            onclick="myFunction()">TERMS OF SERVICE</a>
     </div>
-    
+
     <!-- Header with image -->
     <header class="bgimg w3-display-container w3-grayscale-min" id="home">
     </header>
@@ -86,8 +92,9 @@
     <!-- Footer -->
     <footer class="w3-center w3-light-grey w3-padding-48 w3-large">
         <a href="https://www.linkedin.com/in/dmitry-chumakov"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
-        <a href="https://github.com/d9d9vs9/Dictionary_App_Swift"><i class="fa fa-github w3-hover-opacity"></i></a>
-        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+        <a href="https://github.com/dchprojects/Dictionary_App_Swift"><i class="fa fa-github w3-hover-opacity"></i></a>
+        <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank"
+                class="w3-hover-text-green">w3.css</a></p>
     </footer>
 
     <script>
@@ -96,12 +103,12 @@
             var x = document.getElementById("navDemo");
             if (x.className.indexOf("w3-show") == -1) {
                 x.className += " w3-show";
-            } else { 
+            } else {
                 x.className = x.className.replace(" w3-show", "");
             }
-        }               
+        }
     </script>
- 
+
     <script type="text/javascript">
         document.getElementById("privacy_policy_button").onclick = function () {
             location.href = "privacy_policy.html";
@@ -114,7 +121,7 @@
         };
         document.getElementById("terms_of_service_button_navDemo").onclick = function () {
             location.href = "terms_of_service.html";
-        };       
+        };
     </script>
 
 </body>
